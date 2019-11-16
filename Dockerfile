@@ -15,7 +15,6 @@ WORKDIR /root/android
 ENV PATH="/root/bin:${PATH}"
 RUN git config --global user.name "danwkuo"
 RUN git config --global user.email "dawnkuo.us@gmail.com"
-RUN repo init -u https://android.googlesource.com/platform/manifest
 RUN repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.0_r14
-RUN repo sync -j10
+RUN repo sync -j5
 
